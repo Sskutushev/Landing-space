@@ -124,43 +124,33 @@ document.addEventListener('DOMContentLoaded', () => {
             this.slides.forEach((_, i) => {
                 const dot = document.createElement('div');
                 dot.classList.add('dot');
-                dot.addEventListener('click', () => this.showSlide(i));
+                dot.addEventListener('click', () => {
+                    this.showSlide(i);
+                    this.resetAutoplay();
+                });
                 this.dotsContainer.appendChild(dot);
             });
         }
 
-        showSlide(index, direction = 'next') {
-            const currentSlide = this.slides[this.currentIndex];
-            const nextSlide = this.slides[index];
-
-            // Handle transition direction
-            if (direction === 'next') {
-                currentSlide.classList.add('exiting');
-                nextSlide.classList.add('active');
-            } else {
-                nextSlide.classList.add('active', 'instant');
-                currentSlide.classList.add('exiting-prev');
-            }
-            
-            // Clean up classes after transition
-            setTimeout(() => {
-                currentSlide.classList.remove('active', 'exiting', 'exiting-prev');
-                nextSlide.classList.remove('instant');
-            }, 500); // Match CSS transition duration
-
+        showSlide(index) {
+            this.slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) {
+                    slide.classList.add('active');
+                }
+            });
             this.currentIndex = index;
             this.updateDots();
-            this.resetAutoplay();
         }
 
         next() {
             const nextIndex = (this.currentIndex + 1) % this.slides.length;
-            this.showSlide(nextIndex, 'next');
+            this.showSlide(nextIndex);
         }
 
         prev() {
             const prevIndex = (this.currentIndex - 1 + this.slides.length) % this.slides.length;
-            this.showSlide(prevIndex, 'prev');
+            this.showSlide(prevIndex);
         }
 
         updateDots() {
@@ -177,15 +167,21 @@ document.addEventListener('DOMContentLoaded', () => {
         stopAutoplay() {
             clearInterval(this.autoplayInterval);
         }
-        
+
         resetAutoplay() {
             this.stopAutoplay();
             this.startAutoplay();
         }
 
         addEventListeners() {
-            this.nextBtn.addEventListener('click', () => this.next());
-            this.prevBtn.addEventListener('click', () => this.prev());
+            this.nextBtn.addEventListener('click', () => {
+                this.next();
+                this.resetAutoplay();
+            });
+            this.prevBtn.addEventListener('click', () => {
+                this.prev();
+                this.resetAutoplay();
+            });
         }
     }
 

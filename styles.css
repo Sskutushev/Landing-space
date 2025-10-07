@@ -197,7 +197,9 @@ ul {
 }
 
 .btn-tertiary:hover {
-    background: var(--indigo);
+    background: linear-gradient(135deg, var(--indigo), var(--purple));
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
 }
 
 /* Hero Section */
@@ -421,7 +423,7 @@ ul {
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
+  width: 64px;
   height: 34px;
 }
 
@@ -438,8 +440,9 @@ ul {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--dark-gray);
+  background-color: #374151; /* Gray background */
   transition: .4s;
+  border-radius: 34px;
 }
 
 .slider:before {
@@ -451,22 +454,15 @@ ul {
   bottom: 4px;
   background-color: white;
   transition: .4s;
+  border-radius: 50%;
 }
 
 input:checked + .slider {
-  background-color: var(--indigo);
+  background: linear-gradient(135deg, var(--indigo), var(--purple));
 }
 
 input:checked + .slider:before {
-  transform: translateX(26px);
-}
-
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
+  transform: translateX(30px);
 }
 
 .pricing-cards {
@@ -558,7 +554,7 @@ input:checked + .slider:before {
     margin: 0 auto;
     text-align: center;
     overflow: hidden;
-    min-height: 400px; /* Adjust as needed */
+    min-height: 400px; 
 }
 
 .slide {
@@ -568,17 +564,16 @@ input:checked + .slider:before {
     width: 100%;
     height: 100%;
     opacity: 0;
-    transform: translateX(100%);
-    transition: all 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .slide.active {
     opacity: 1;
-    transform: translateX(0);
-}
-
-.slide.exiting {
-    transform: translateX(-100%);
+    z-index: 1;
 }
 
 .slide img {
@@ -656,8 +651,7 @@ input:checked + .slider:before {
 .slider-dots .dot {
     width: 12px;
     height: 12px;
-    border-radius: 50%;
-    background: var(--dark-gray);
+    background: #555;
     margin: 0 5px;
     cursor: pointer;
     transition: background 0.3s;
