@@ -726,10 +726,12 @@ input:checked+.slider:before {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    padding: 0; /* Ensure alignment */
 }
 
 .form-group-checkbox input {
-    margin-right: 15px;
+    margin: 0;
+    margin-right: 15px; /* Space between checkbox and label */
 }
 
 .form-group-checkbox label {
