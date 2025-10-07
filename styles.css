@@ -641,8 +641,8 @@ input:checked+.slider:before {
 }
 
 .slider-btn img {
-    width: 24px;
-    height: 24px;
+    width: 25px;
+    height: 25px;
     filter: brightness(0) invert(1);
 }
 
