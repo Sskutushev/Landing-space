@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Космическое агентство</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4233b107a4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-2.5-8.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zm5 0c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zm-2.5 5c-2.33 0-4.31-1.46-5.11-3.5h10.22c-.8 2.04-2.78 3.5-5.11 3.5z" fill="white"/>
+                </svg>
+                <span>Space</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#hero">Главная</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#pricing">Цены</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+            <button class="btn btn-primary">Начать путешествие</button>
+            <div class="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" class="parallax" data-speed="0.5">
+        <div class="hero-content">
+            <h1>Исследуйте галактику</h1>
+            <p>Откройте для себя новые миры с нашими космическими турами.</p>
+            <div class="cta-buttons">
+                <button class="btn btn-primary">Забронировать полет</button>
+                <button class="btn btn-secondary">
+                    <i class="fas fa-play"></i> Смотреть видео
+                </button>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <i class="fas fa-mouse"></i>
+        </div>
+        <canvas id="particle-canvas"></canvas>
+    </section>
+
+    <section id="about" class="fade-in">
+        <div class="container">
+            <h2 class="section-title">О нас</h2>
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://via.placeholder.com/500x600" alt="Ракета">
+                </div>
+                <div class="about-text">
+                    <h3>Ваш путь к звездам начинается здесь</h3>
+                    <p>Мы — команда энтузиастов, стремящихся сделать космос доступным для каждого. Наша миссия — предоставить безопасные и незабываемые путешествия за пределы Земли.</p>
+                    <div class="features">
+                        <div class="feature fade-in">
+                            <i class="fas fa-rocket"></i>
+                            <h4><span class="counter" data-target="500">0</span>+</h4>
+                            <p>Успешных полетов</p>
+                        </div>
+                        <div class="feature fade-in">
+                            <i class="fas fa-user-astronaut"></i>
+                            <h4><span class="counter" data-target="1200">0</span>+</h4>
+                            <p>Счастливых клиентов</p>
+                        </div>
+                        <div class="feature fade-in">
+                            <i class="fas fa-award"></i>
+                            <h4><span class="counter" data-target="15">0</span>+</h4>
+                            <p>Лет на рынке</p>
+                        </div>
+                         <div class="feature fade-in">
+                            <i class="fas fa-shield-alt"></i>
+                            <h4>100%</h4>
+                            <p>Гарантия безопасности</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="fade-in">
+        <div class="container">
+            <h2 class="section-title">Наши услуги</h2>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <i class="fas fa-moon"></i>
+                    <h4>Лунный тур</h4>
+                    <p>Совершите незабываемую прогулку по поверхности Луны.</p>
+                    <span class="price">$10,000</span>
+                    <button class="btn btn-tertiary">Подробнее</button>
+                </div>
+                <div class="service-card fade-in">
+                    <i class="fas fa-globe-americas"></i>
+                    <h4>Марсианская экспедиция</h4>
+                    <p>Станьте одним из первых исследователей Красной планеты.</p>
+                    <span class="price">$50,000</span>
+                    <button class="btn btn-tertiary">Подробнее</button>
+                </div>
+                <div class="service-card fade-in">
+                    <i class="fas fa-satellite"></i>
+                    <h4>Орбитальный отель</h4>
+                    <p>Насладитесь видом на Землю с комфортом пятизвездочного отеля.</p>
+                    <span class="price">$5,000</span>
+                    <button class="btn btn-tertiary">Подробнее</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="fade-in">
+        <div class="container">
+            <h2 class="section-title">Тарифы</h2>
+            <div class="toggle-container">
+                <span>Месяц</span>
+                <label class="switch">
+                    <input type="checkbox" class="pricing-toggle">
+                    <span class="slider round"></span>
+                </label>
+                <span>Год</span>
+            </div>
+            <div class="pricing-cards">
+                <div class="pricing-card fade-in">
+                    <h4>Новичок</h4>
+                    <div class="price-tag">
+                        <span class="price" data-monthly="$99" data-yearly="$999">$99</span>
+                    </div>
+                    <ul>
+                        <li><i class="fas fa-check"></i>1 полет в год</li>
+                        <li><i class="fas fa-check"></i>Базовая страховка</li>
+                        <li><i class="fas fa-times"></i>Персональный гид</li>
+                        <li><i class="fas fa-times"></i>Доступ в VIP-зону</li>
+                    </ul>
+                    <button class="btn btn-tertiary">Выбрать план</button>
+                </div>
+                <div class="pricing-card popular fade-in">
+                    <span class="badge">Хит</span>
+                    <h4>Исследователь</h4>
+                    <div class="price-tag">
+                        <span class="price" data-monthly="$299" data-yearly="$2999">$299</span>
+                    </div>
+                    <ul>
+                        <li><i class="fas fa-check"></i>5 полетов в год</li>
+                        <li><i class="fas fa-check"></i>Расширенная страховка</li>
+                        <li><i class="fas fa-check"></i>Персональный гид</li>
+                        <li><i class="fas fa-times"></i>Доступ в VIP-зону</li>
+                    </ul>
+                    <button class="btn btn-primary">Выбрать план</button>
+                </div>
+                <div class="pricing-card fade-in">
+                    <h4>Легенда</h4>
+                    <div class="price-tag">
+                        <span class="price" data-monthly="$999" data-yearly="$9999">$999</span>
+                    </div>
+                    <ul>
+                        <li><i class="fas fa-check"></i>Неограниченные полеты</li>
+                        <li><i class="fas fa-check"></i>Полная страховка</li>
+                        <li><i class="fas fa-check"></i>Персональный гид</li>
+                        <li><i class="fas fa-check"></i>Доступ в VIP-зону</li>
+                    </ul>
+                    <button class="btn btn-tertiary">Выбрать план</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="fade-in">
+        <div class="container">
+            <h2 class="section-title">Отзывы</h2>
+            <div class="slider-container">
+                <div class="slide active">
+                    <img src="https://via.placeholder.com/100" alt="Клиент 1">
+                    <h4>Елена Иванова</h4>
+                    <p class="role">Путешественник</p>
+                    <p class="review">"Это было невероятно! Вид на Землю из космоса просто захватывает дух. Организация на высшем уровне!"</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://via.placeholder.com/100" alt="Клиент 2">
+                    <h4>Алексей Петров</h4>
+                    <p class="role">Предприниматель</p>
+                    <p class="review">"Полет на Марс — лучшее вложение в моей жизни. Команда профессионалов, все продумано до мелочей."</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://via.placeholder.com/100" alt="Клиент 3">
+                    <h4>Мария Сидорова</h4>
+                    <p class="role">Блогер</p>
+                    <p class="review">"Орбитальный отель — это просто сказка. Сервис, еда, виды — все на 10 из 10. Рекомендую!"</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <button class="slider-btn prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-btn next"><i class="fas fa-chevron-right"></i></button>
+                <div class="slider-dots"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="fade-in">
+        <div class="container">
+            <h2 class="section-title">Свяжитесь с нами</h2>
+            <div class="contact-grid">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Имя" required minlength="2">
+                        <div class="error-message"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Email" required>
+                        <div class="error-message"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="phone" placeholder="Телефон">
+                        <div class="error-message"></div>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Сообщение" rows="5"></textarea>
+                    </div>
+                    <div class="form-group-checkbox">
+                        <input type="checkbox" id="agreement" name="agreement" required>
+                        <label for="agreement">Я согласен на обработку персональных данных</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Отправить</button>
+                </form>
+                <div class="contact-info">
+                    <h4>Контактная информация</h4>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:contact@space.com">contact@space.com</a></p>
+                    <p><i class="fas fa-phone"></i> +7 (999) 123-45-67</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Звездный городок, 1, Москва</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-2.5-8.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zm5 0c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zm-2.5 5c-2.33 0-4.31-1.46-5.11-3.5h10.22c-.8 2.04-2.78 3.5-5.11 3.5z" fill="white"/>
+                        </svg>
+                        <span>Space</span>
+                    </a>
+                    <p>Исследуйте галактику вместе с нами.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Быстрые ссылки</h4>
+                    <ul>
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#services">Услуги</a></li>
+                        <li><a href="#pricing">Цены</a></li>
+                        <li><a href="#contact">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Услуги</h4>
+                    <ul>
+                        <li><a href="#">Лунный тур</a></li>
+                        <li><a href="#">Марсианская экспедиция</a></li>
+                        <li><a href="#">Орбитальный отель</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Подписка на новости</h4>
+                    <form class="subscribe-form">
+                        <input type="email" placeholder="Ваш Email">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Космическое Агентство. Все права защищены.</p>
+                <div class="footer-links">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Условия использования</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
